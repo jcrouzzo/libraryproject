@@ -10,6 +10,7 @@ function getBooksBorrowedCount(books) {
   return books.filter((book) => !book.borrows[0].returned).length
 }
 
+// Helper function used for next 3 functions getMostCommonGenres, getMostPopularAuthors and GetMostPopularBooks
 function _objectSort(obj) {
   const keys = Object.keys(obj);
   return keys.sort((keyA, keyB) => {
